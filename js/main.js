@@ -1,6 +1,5 @@
 "use strict";
 
-// Selecting elements
 const player0El = document.querySelector(".player--0");
 const player1El = document.querySelector(".player--1");
 const score0El = document.querySelector("#score--0");
@@ -15,7 +14,6 @@ const btnHold = document.querySelector(".btn--hold");
 
 let scores, currentScore, activePlayer, playing;
 
-// Starting conditions
 const init = function () {
   scores = [0, 0];
   currentScore = 0;
@@ -70,7 +68,6 @@ btnHold.addEventListener("click", function () {
   if (playing) {
     // 1. Add current score to active player's score
     scores[activePlayer] += currentScore;
-    // scores[1] = scores[1] + currentScore
 
     document.getElementById(`score--${activePlayer}`).textContent =
       scores[activePlayer];
